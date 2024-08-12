@@ -3,6 +3,7 @@ import { TodoStatusTab } from "./TodoStatusTab";
 import useTodoListStore from "../../store/TodoList";
 import { statuses } from "./const";
 import "./TodoControls.css";
+import { filterItems } from "../../utils";
 
 export const TodoControls: FC = () => {
   const { todoItems, clearCompleted } = useTodoListStore();
@@ -10,7 +11,8 @@ export const TodoControls: FC = () => {
   return (
     <div className="todo-controls">
       <span data-testid="todo-count" className="todo-count">
-        {todoItems.length} items left
+        {/* как я понял - "items left", - это количество еще невыполненных задач */}
+        {filterItems(todoItems, "Active").length} items left
       </span>
       <div className="todo-status-tabs">
         {statuses.map((status) => (

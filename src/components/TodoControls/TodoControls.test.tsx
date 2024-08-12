@@ -29,7 +29,9 @@ describe("TodoControls", () => {
 
     const numberOfItems = screen.getByTestId("todo-count");
 
-    expect(numberOfItems).toHaveTextContent(`${mockedItems.length} items left`);
+    expect(numberOfItems).toHaveTextContent(
+      `${mockedItems.filter((todo) => !todo.completed).length} items left`
+    );
   });
 
   it("should render tabs", () => {
