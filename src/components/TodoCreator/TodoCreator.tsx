@@ -19,15 +19,21 @@ export const TodoCreator: FC = () => {
     <div
       className="todo-creator"
       title="для добавления введите и нажмите ENTER"
+      data-testid="todo-creator"
     >
       <input
+        data-testid="todo-creator-input"
         type="text"
         className="todo-creator__input"
         onKeyDown={handleEnterInput}
         ref={inputRef}
         placeholder="What needs to be done?"
       />
-      <ChevronIcon className="todo-creator__icon" width={32} />
+      <ChevronIcon
+        className="todo-creator__icon"
+        data-testid="todo-creator-icon"
+        width={32}
+      />
     </div>
   );
 };

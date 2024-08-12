@@ -12,9 +12,9 @@ export const TodoList: FC = () => {
   const filteredItems = filterItems(todoItems, activeStatus);
 
   return (
-    <ul className="todo__list">
+    <ul className="todo__list" data-testid="todo-list">
       {filteredItems.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} checked={todo.completed} />
+        <TodoItem key={todo.id} todo={todo} />
       ))}
     </ul>
   );

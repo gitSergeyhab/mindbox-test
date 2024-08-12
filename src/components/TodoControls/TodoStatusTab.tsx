@@ -1,5 +1,4 @@
 import { FC } from "react";
-import clsx from "clsx";
 import { ITodoStatus } from "../../types";
 import useTodoStatusStore from "../../store/TodoStatus";
 
@@ -11,10 +10,12 @@ export const TodoStatusTab: FC<TodoStatusTabProps> = ({ status }) => {
   const { activeStatus, setActiveStatus } = useTodoStatusStore();
   return (
     <button
-      className={clsx(
-        "todo__control",
-        status === activeStatus && "todo__control--active"
-      )}
+      data-testid="todo-status-tab"
+      className={
+        status === activeStatus
+          ? "todo__control todo__control--active"
+          : "todo__control"
+      }
       key={status}
       onClick={() => setActiveStatus(status)}
     >

@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { ITodoItem } from "../types";
 import { getNewTodoId } from "../utils";
 
-const initialList: ITodoItem[] = [
+export const initialList: ITodoItem[] = [
   { text: "Тестовое задание", completed: false, id: 1 },
   { text: "Прекрасный код", completed: true, id: 2 },
   { text: "Покрытие тестами", completed: false, id: 3 },
