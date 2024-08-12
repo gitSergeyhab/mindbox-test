@@ -1,7 +1,8 @@
 import { TodoCreator } from "./components/TodoCreator/TodoCreator";
 import { TodoList } from "./components/TodoList/TodoList";
-import "./App.css";
 import { TodoControls } from "./components/TodoControls/TodoControls";
+
+import "./App.css";
 
 function App() {
   return (
