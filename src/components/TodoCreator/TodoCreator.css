@@ -1,0 +1,24 @@
+.todo-creator {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.todo-creator__icon {
+  color: var(--secondary-text);
+}
+
+.todo-creator__input {
+  border: none;
+  font-style: italic;
+  color: var(--secondary-text);
+}
+
+.todo-creator__input:focus ~ .todo-creator__icon {
+  color: var(--primary-text);
+}
+
+.todo-creator__input:focus {
+  color: var(--primary-text);
+}

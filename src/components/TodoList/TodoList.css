@@ -1,0 +1,67 @@
+.todo__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.todo__item {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-left: none;
+  border-right: none;
+}
+.todo__item:not(:last-child) {
+  border-bottom: none;
+}
+
+.todo-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0.25rem;
+  width: 100%;
+}
+
+.todo-input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border: var(--secondary-text) solid 1px;
+}
+
+.todo-label:hover,
+.todo-label:hover .todo-icon {
+  color: var(--main-green);
+  border-color: var(--main-green);
+}
+
+.todo-text {
+  color: var(--primary-text);
+}
+.todo-input:checked ~ .todo-text {
+  text-decoration: line-through;
+  color: var(--secondary-text);
+}
+
+.todo-input:focus ~ .todo-icon {
+  border-color: var(--main-green);
+}
+
+.todo-icon {
+  color: var(--main-green);
+}

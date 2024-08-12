@@ -1,0 +1,29 @@
+.todo-controls {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--main-gray);
+  font-size: 0.6rem;
+  padding: 0.5rem;
+}
+
+.todo-status-tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.todo__control {
+  padding: 0.15rem 0.25rem;
+  border: solid 1px transparent;
+  color: var(--main-gray);
+  background-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.todo__control--active {
+  border-color: var(--header-color);
+}
