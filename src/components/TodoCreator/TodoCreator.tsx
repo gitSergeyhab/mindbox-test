@@ -32,7 +32,7 @@ export const TodoCreator: FC = () => {
       <ChevronIcon
         className="todo-creator__icon"
         data-testid="todo-creator-icon"
-        width={32}
+        width={48}
       />
     </div>
   );

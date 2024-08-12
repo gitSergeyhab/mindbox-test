@@ -1,8 +1,11 @@
 .todo-creator {
   display: flex;
+  align-items: center;
   flex-direction: row-reverse;
   gap: 1rem;
-  padding: 0.5rem 0;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  box-shadow: 0 1px 4px var(--main-gray);
 }
 
 .todo-creator__icon {
@@ -13,6 +16,8 @@
   border: none;
   font-style: italic;
   color: var(--secondary-text);
+  font-size: 2rem;
+  width: 100%;
 }
 
 .todo-creator__input:focus ~ .todo-creator__icon {
